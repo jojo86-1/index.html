@@ -1,0 +1,50 @@
+Buatkan saya satu file kode HTML lengkap (gabungan HTML, CSS, dan JavaScript internal dalam satu file `index.html`) yang siap di-deploy ke GitHub Pages untuk media pembelajaran interaktif mata pelajaran **IPA Kelas 9 SMP materi Bioteknologi**. 
+
+Buat desainnya sangat modern, menarik, interaktif, dan ramah untuk pelajar SMP dengan spesifikasi dan fitur lengkap berikut ini:
+
+### 1. Desain Visual & UI/UX
+- **Tema Warna:** Nuansa sains & bioteknologi yang segar (kombinasi Emerald Green `#10B981`, Teal `#0D9488`, Slate Dark `#0F172A`, dan aksen latar lembut `#F8FAFC`).
+- **Tampilan & Tipografi:** Gunakan Google Fonts ('Poppins' untuk judul dan 'Plus Jakarta Sans' atau 'Inter' untuk teks isi). Gunakan gaya *Glassmorphism* ringan, bayangan halus (*soft shadows*), sudut membulat (*rounded corners*), serta ikon menarik menggunakan SVG atau FontAwesome/Lucide CDN.
+- **Responsif:** Tampilan harus rapi dan nyaman diakses baik di layar komputer/laptop maupun smartphone.
+- **Animasi:** Tambahkan transisi halus antar halaman/tab, efek *hover* pada kartu, dan animasi konfeti (bisa menggunakan canvas-confetti CDN) saat siswa menyelesaikan kuis dengan nilai tinggi.
+
+### 2. Struktur & Fitur Aplikasi Web
+Buat navigasi berbasis *Single Page Application* (SPA) menggunakan JavaScript sehingga perpindahan halaman terasa instan tanpa reload:
+
+1. **Halaman Awal / Registrasi Data Diri Siswa (Wajib Diisi Sebelum Masuk/Kuis):**
+   - Form input interaktif untuk memasukkan:
+     - **Nama Lengkap**
+     - **Kelas** (Pilihan dropdown: IX-A, IX-B, IX-C, IX-D, IX-E, atau input teks)
+     - **Nomor Absen**
+     - **Asal Sekolah**
+   - Simpan data diri ini di `localStorage` dan tampilkan *badge* profil siswa di bagian pojok kanan atas (Navbar) selama sesi belajar berlangsung, lengkap dengan tombol "Ubah Profil".
+
+2. **Tab 1: Materi Interaktif Bioteknologi**
+   Sajikan materi dengan tata letak *card* yang mudah dibaca, dilengkapi ilustrasi ikon/diagram SVG sederhana, *accordion* (buka-tutup detail), dan tabel perbandingan:
+   - **Pengertian & Prinsip Dasar Bioteknologi:** Perbedaan mendasar Bioteknologi Konvensional vs. Bioteknologi Modern.
+   - **Bioteknologi Konvensional:** Pemanfaatan mikroorganisme secara utuh (fermentasi), contoh produk lengkap dengan bahan baku dan nama ilmiah mikroorganismenya (Tempe - *Rhizopus oryzae*, Tape - *Saccharomyces cerevisiae*, Yoghurt - *Lactobacillus bulgaricus* & *Streptococcus thermophilus*, Kecap - *Aspergillus wentii*, Nata de Coco - *Acetobacter xylinum*).
+   - **Bioteknologi Modern:** Rekayasa genetika, Kultur Jaringan (sifat totipotensi), Kloning, Bayi Tabung (IVF), Pembuatan Insulin Sintetis (teknik plasmid/DNA rekombinan), dan Tanaman Transgenik (contoh: Jagung Bt).
+   - **Dampak Penerapan Bioteknologi:** Dampak positif dan negatif di bidang lingkungan (polusi gen/superweed), kesehatan (alergi), dan sosial-ekonomi.
+
+3. **Tab 2: Kuis Interaktif Berbasis Stimulus & HOTS (10 Soal)**
+   - Buat **10 soal pilihan ganda (A, B, C, D) bertipe HOTS (Higher Order Thinking Skills)** tingkat C4 (Menganalisis), C5 (Mengevaluasi), dan C6 (Mencipta/Memecahkan Masalah).
+   - **Wajib menggunakan Stimulus:** Setiap soal harus diawali dengan kotak stimulus yang jelas (misalnya: kutipan artikel berita singkat, tabel hasil percobaan fermentasi, studi kasus gagal panen/hama, diagram alur pembuatan insulin, atau grafik suhu vs aktivitas ragi).
+   - **Fitur Kuis:**
+     - Timer hitung mundur (misal: 15 menit) dan *Progress Bar* nomor soal.
+     - Navigasi nomor soal (bisa lompat antar nomor dan melihat soal mana yang sudah dijawab).
+     - Siswa tidak bisa menekan tombol "Selesai & Lihat Nilai" sebelum semua soal terjawab (atau muncul peringatan konfirmasi).
+
+4. **Halaman Hasil & Pembahasan Otomatis + Kartu Skor Siswa**
+   - Setelah kuis selesai, tampilkan **Kartu Hasil Belajar** yang memuat:
+     - Data Diri Siswa (Nama, Kelas, No. Absen, Sekolah) yang diinput di awal.
+     - Skor Akhir (Skala 0–100), jumlah benar/salah, waktu pengerjaan, dan predikat (misal: *Sangat Kompeten / Ahli Bioteknologi Muda*, *Kompeten*, *Perlu Pendalaman*).
+     - **Pembahasan Lengkap Per Soal:** Menampilkan jawaban yang dipilih siswa, kunci jawaban yang benar, serta penjelasan logis mengapa jawaban tersebut tepat berdasarkan stimulus soal.
+     - Tombol **"Ulangi Kuis"** (mengacak urutan soal/pilihan) dan tombol **"Cetak / Simpan Bukti Hasil (Print/PDF)"** menggunakan `window.print()` dengan CSS `@media print` yang rapi agar siswa bisa menyimpannya sebagai PDF untuk dikumpulkan ke guru.
+
+5. **Footer / Kredit Pembuat:**
+   - Tambahkan bagian *footer* yang rapi dengan placeholder untuk nama guru/pembuat media pembelajaran (misal: *"Dikembangkan untuk Pembelajaran IPA Kelas IX | Hosted on GitHub Pages"*).
+
+### 3. Ketentuan Teknis
+- Pastikan tidak ada error pada konsol JavaScript.
+- Semua teks menggunakan Bahasa Indonesia yang baku, komunikatif, dan sesuai dengan Kurikulum Merdeka / Kurikulum 2013 revisi untuk tingkat SMP Kelas 9.
+- Berikan kode secara utuh dari `<!DOCTYPE html>` hingga `</html>` tanpa ada bagian yang dipotong atau disingkat.
